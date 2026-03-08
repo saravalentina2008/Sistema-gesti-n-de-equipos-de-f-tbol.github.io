@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión Profesional de Equipos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+<h1> Gestión Profesional de Equipos</h1>
+<p>Administra equipos & jugadores fácilmente</p>
+</header>
+
+<main class="container">
+
+<div class="card">
+<h2>Crear Equipo</h2>
+<input id="teamName" placeholder="Nombre del equipo">
+<button onclick="crearEquipo()">Crear Equipo</button>
+</div>
+
+<div class="card">
+<h2>Agregar Jugador</h2>
+<input id="playerName" placeholder="Nombre del jugador">
+<input id="playerPosition" placeholder="Posición">
+<select id="teamSelect"></select>
+<button onclick="agregarJugador()">Agregar Jugador</button>
+</div>
+
+<div class="card">
+<h2>Buscar Jugador</h2>
+<input id="searchPlayer" placeholder="Buscar jugador..." onkeyup="buscarJugador()">
+</div>
+
+<div class="card">
+<h2>Equipos Registrados</h2>
+<div id="stats"></div>
+<ul id="teamList"></ul>
+</div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
