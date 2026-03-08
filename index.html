@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Gestión de Equipos de Fútbol</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+<h1>Gestión de Equipos de Fútbol</h1>
+<p>Administración de equipos y jugadores</p>
+</header>
+
+<main class="container">
+
+<!-- CREAR EQUIPO -->
+<div class="card">
+
+<h2>Crear Equipo</h2>
+
+<input type="text" id="teamName" placeholder="Nombre del equipo">
+
+<button class="btn" onclick="crearEquipo()">
+Crear Equipo
+</button>
+
+</div>
+
+<!-- SUBIR LOGO -->
+<div class="card">
+
+<h2>Subir Logo del Equipo</h2>
+
+<select id="teamLogoSelect"></select>
+
+<input type="file" id="teamLogo" accept="image/*" hidden>
+
+<label for="teamLogo" class="btn">
+Elegir Logo
+</label>
+
+<span id="fileName" class="info">
+Ningún archivo seleccionado
+</span>
+
+<button class="btn" onclick="subirLogo()">
+Subir Logo
+</button>
+
+<p class="info">
+Opcional: puedes crear el equipo sin subir imagen.
+</p>
+
+</div>
+
+<!-- AGREGAR JUGADOR -->
+<div class="card">
+
+<h2>Agregar Jugador</h2>
+
+<input type="text" id="playerName" placeholder="Nombre del jugador">
+
+<input type="text" id="playerPosition" placeholder="Posición">
+
+<select id="teamSelect"></select>
+
+<button class="btn" onclick="agregarJugador()">
+Agregar Jugador
+</button>
+
+</div>
+
+<!-- BUSCAR -->
+<div class="card">
+
+<h2>Buscar Jugador</h2>
+
+<input type="text" id="searchPlayer" placeholder="Buscar jugador..." onkeyup="buscarJugador()">
+
+</div>
+
+<!-- LISTA -->
+<div class="card">
+
+<h2>Equipos Registrados</h2>
+
+<div id="stats"></div>
+
+<ul id="teamList"></ul>
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
